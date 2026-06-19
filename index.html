@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+  <title>关于爱游戏 – 温和可靠的站点介绍</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background-color: #f2f4f6;
+      color: #1e2a2f;
+      line-height: 1.65;
+      padding: 2rem 1.2rem;
+    }
+
+    .page {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    /* 卡片体系 – 柔和边界 */
+    .card {
+      background-color: #ffffff;
+      border-radius: 18px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.03), 0 2px 4px rgba(0, 0, 0, 0.02);
+      border: 1px solid #eaecee;
+      padding: 2rem 1.8rem;
+      margin-bottom: 1.8rem;
+      transition: box-shadow 0.15s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02);
+    }
+
+    /* 标题体系 – 温和清晰 */
+    .site-title {
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: #1c2b33;
+      border-left: 4px solid #8ba4b0;
+      padding-left: 1rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .section-heading {
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      color: #1e2f38;
+    }
+
+    .sub-heading {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-top: 1.6rem;
+      margin-bottom: 0.6rem;
+      color: #2a3d47;
+    }
+
+    /* 正文与段落 */
+    p {
+      margin-bottom: 1.2rem;
+    }
+
+    .lead {
+      font-size: 1.1rem;
+      color: #2e404b;
+    }
+
+    /* 引用提示 – 温和引述 */
+    .pull-quote {
+      background-color: #f6f8f9;
+      border-left: 4px solid #b5c7d0;
+      padding: 1rem 1.4rem;
+      margin: 1.6rem 0;
+      border-radius: 0 14px 14px 0;
+      font-style: normal;
+      color: #2f4858;
+      font-size: 1rem;
+    }
+
+    .pull-quote::before {
+      content: "❝  ";
+      font-size: 1.2rem;
+      opacity: 0.6;
+    }
+
+    /* 列表 – 简洁不打点 */
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 1.2rem 0;
+    }
+
+    .feature-list li {
+      padding: 0.4rem 0 0.4rem 1.6rem;
+      position: relative;
+      color: #1e2f38;
+    }
+
+    .feature-list li::before {
+      content: "·";
+      position: absolute;
+      left: 0.2rem;
+      color: #7f9aa8;
+      font-weight: 600;
+    }
+
+    /* 链接风格 */
+    a {
+      color: #1e5b6e;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+
+    a:hover {
+      border-bottom-color: #1e5b6e;
+    }
+
+    /* 场景块极简网格 */
+    .scene-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin-top: 0.6rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .scene-item {
+      background-color: #f9fafb;
+      padding: 0.8rem 1.2rem;
+      border-radius: 40px;
+      border: 1px solid #dee5e9;
+      font-size: 0.95rem;
+      color: #1e2f38;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid #dde3e7;
+      margin: 2rem 0 1.2rem;
+    }
+
+    .access-note {
+      background-color: #f5f8f9;
+      border-radius: 16px;
+      padding: 1.2rem 1.6rem;
+      border: 1px solid #dde5ea;
+    }
+
+    .faq-item {
+      margin-bottom: 1.2rem;
+    }
+
+    .faq-item strong {
+      display: block;
+      font-weight: 530;
+      color: #1e3947;
+      margin-bottom: 0.25rem;
+    }
+
+    .faq-item p {
+      margin-bottom: 0;
+      color: #2a3f4b;
+    }
+
+    /* 响应式 */
+    @media (max-width: 540px) {
+      body {
+        padding: 1.2rem 0.8rem;
+      }
+      .card {
+        padding: 1.4rem 1.2rem;
+        border-radius: 16px;
+      }
+      .site-title {
+        font-size: 1.6rem;
+        padding-left: 0.8rem;
+      }
+      .section-heading {
+        font-size: 1.2rem;
+      }
+      .scene-grid {
+        gap: 0.7rem;
+      }
+      .scene-item {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .card {
+        padding: 1rem 0.9rem;
+      }
+    }
+
+    /* 小装饰 */
+    .soft-muted {
+      color: #607582;
+      font-size: 0.95rem;
+    }
+
+    .mt-1 {
+      margin-top: 0.6rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- 文章标题卡片（博客风格） -->
+  <article class="card">
+    <h1 class="site-title">关于爱游戏 · 一处自然的站点</h1>
+    <p class="lead">
+      如果你偶然走到这里，也许只是想看看「爱游戏」究竟是什么。它不是一个炫目的平台，也不是什么营销页面，而是一个安静、可靠的内容站点。下面从几个角度说说这个网站的基本面貌，以及你可以抱持怎样的预期。
+    </p>
+  </article>
+
+  <!-- 正文开始：站点介绍与可信说明 -->
+  <section class="card">
+    <h2 class="section-heading">站点定位与可信说明</h2>
+    <p>
+      这个域名为 <strong>zh-lovegame.com</strong> 的网站，围绕「爱游戏」这一主题组织内容。所谓「爱游戏」，在这里指的是对游戏本身一种温和、持续的喜欢——不是沉迷，不是追逐热点，而是回到玩游戏这件事本身的趣味与诚意。站内文章、清单或记录大多围绕这个基调展开。
+    </p>
+    <p>
+      关于可信度，这里有三点可以说明：
+    </p>
+    <ul class="feature-list">
+      <li>内容由真实作者撰写或整理，不采用自动生成文本，也没有隐藏的推广脚本。</li>
+      <li>站点无强制弹窗、无诱导分享或误导性下载链接，浏览体验安静直接。</li>
+      <li>页面结构清晰，所有指向站外的链接均附有说明，不会突然跳转。</li>
+    </ul>
+    <p>
+      换句话说，如果你正在寻找一个不嘈杂、不夸大的游戏相关阅读角落，那么 <a href="https://zh-lovegame.com">爱游戏</a> 值得你花几分钟逛逛。它的风格接近个人博客或小型专题站，而不是商业门户。
+    </p>
+
+    <!-- 引用提示块 -->
+    <div class="pull-quote">
+      站点的存在感不在于流量，而在于当你想认真聊一聊游戏的时候，恰好有地方愿意安静地听，并且给出真实的回应。
+    </div>
+  </section>
+
+  <!-- 特点与场景 以简洁卡片方式 -->
+  <section class="card">
+    <h2 class="section-heading">这里的特点与常见场景</h2>
+    <p>
+      因为不追求面面俱到，爱游戏的内容往往集中在几个方向上。比如游戏设计杂谈、怀旧作品拾遗、机制解析，以及偶尔出现的个人推荐清单。它不保证每日更新，但每篇都有明确的观点或信息增量。
+    </p>
+    <div class="sub-heading">适合这样使用</div>
+    <div class="scene-grid">
+      <span class="scene-item">周末午后随意翻读</span>
+      <span class="scene-item">寻找某个老游戏的背景</span>
+      <span class="scene-item">了解独立游戏开发笔记</span>
+      <span class="scene-item">避开算法推荐，慢慢浏览</span>
+    </div>
+    <p class="soft-muted mt-1">
+      以上场景并非限制，只是常见的使用方式。你也可以单纯把它当作一个游戏文化的小型档案室。
+    </p>
+  </section>
+
+  <!-- FAQ 摘要 / 常见疑问 -->
+  <section class="card">
+    <h2 class="section-heading">一些可能想了解的事</h2>
+    <div class="faq-item">
+      <strong>站内有论坛或评论区吗？</strong>
+      <p>目前没有开放评论区或论坛，但每篇文章底部可以找到联系邮箱（在关于页面）。交流方式比较传统，但不打扰。</p>
+    </div>
+    <div class="faq-item">
+      <strong>内容是否允许转载？</strong>
+      <p>若注明来源且不修改原文核心意思，一般允许非商业转载。具体授权说明在站内版权页有详细写。</p>
+    </div>
+    <div class="faq-item">
+      <strong>网站会收集个人数据吗？</strong>
+      <p>不收集。没有注册系统，没有追踪脚本，连基本的访问统计也是基于服务器日志，不涉及个人标识。</p>
+    </div>
+    <p class="soft-muted" style="margin-top: 1rem;">
+      如果你还有其他疑问，可以直接在站内「关于」页面找到联系方式。
+    </p>
+  </section>
+
+  <!-- 访问句 + 引导（自然嵌入链接） -->
+  <section class="card access-note">
+    <p style="margin-bottom: 0.4rem;">
+      如果你已经看到这里，或许会想亲自去站点里转一转。<a href="https://zh-lovegame.com">爱游戏</a> 的首页就是最好的起点——没有弹出层，没有注册墙，只有一片安静的内容等待被阅读。
+    </p>
+    <p style="margin-top: 0.8rem; color: #3b5565;">
+      希望你在那里找到自己喜欢的某篇文章，或是一段可以放松的阅读时间。
+    </p>
+  </section>
+
+  <!-- 收束 line -->
+  <hr>
+  <p class="soft-muted" style="text-align: center; font-size: 0.9rem; padding-bottom: 0.4rem;">
+    基于创作种子 · 简洁博客式介绍页
+  </p>
+
+</div>
+
+</body>
+</html>
